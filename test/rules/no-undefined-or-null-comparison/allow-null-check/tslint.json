@@ -1,0 +1,5 @@
+{
+  "rules": {
+    "no-undefined-or-null-comparison": [true, "allow-null-check"]
+  }
+}

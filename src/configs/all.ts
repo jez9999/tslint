@@ -123,6 +123,7 @@ export const rules = {
     "no-sparse-arrays": true,
     "no-submodule-imports": true,
     "no-unbound-method": true,
+    "no-undefined-or-null-comparison": true,
     "no-unnecessary-class": [true, "allow-empty-class"],
     "no-unsafe-any": true,
     "no-unsafe-finally": true,

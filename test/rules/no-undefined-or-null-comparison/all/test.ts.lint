@@ -1,0 +1,22 @@
+var testVariable = 123;
+
+function testFunction() {
+    if ((x === null) || (undefined != null)) {
+               ~~~~                            [Comparison operand is null]
+                         ~~~~~~~~~             [Comparison operand is undefined]
+                                      ~~~~     [Comparison operand is null]
+        console.log("called");
+    }
+
+    var z = (x + 3) !== undefined ? 10 : 20;
+                        ~~~~~~~~~            [Comparison operand is undefined]
+    return;
+}
+
+// disallow double-equality undefined checks
+var x = (y == undefined) ? 1 : 2;
+              ~~~~~~~~~           [Comparison operand is undefined]
+
+// allow double-equality null checks
+var x = (y == null) ? 1 : 2;
+              ~~~~           [Comparison operand is null]
